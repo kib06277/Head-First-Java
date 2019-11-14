@@ -1,0 +1,10 @@
+https://www.itread01.com/content/1543211946.html 參考網址
+
+做法：
+1.新建專案 new project
+2.新建模組 new module
+3.模組選擇 java Library
+4.命名模組名稱
+5.在模組內 new class
+6.命名 class 名稱
+7.在 class 開始撰寫 java 程式
