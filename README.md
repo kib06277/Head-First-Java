@@ -71,4 +71,35 @@ B：直接存取變數，當你要對變數做更動時，其他存取到該變�
 10.全域變數與區域變數之間的差別，全域變數宣告在 class 中;區域變數宣告在 method 中，全域變數有預設值;區域變數沒有預設值。<br>
 11.物件的相等 (用 == 或者 equals() )<br>
 
-
+# 第五張 - 超強力 Method
+1.實作船戰遊戲。<br>
+2.開發 Class 流程：<br>
+A：找出 Class 應該做的事情。<br>
+B：列出實體變數與 method。<br>
+C：編寫 method 的 precode。<br>
+D：撰寫 method 的測試用程式。<br>
+E：實作出 class。<br>
+F：測試 method。<br>
+G：除錯或重新設計。<br><br>
+3.介紹 precode。<br>
+4.precode 分為三類：<br>
+A：instance variable 的宣告。<br>
+B：method 的宣告。<br>
+C：method 的邏輯。<br><br>
+5.要點：<br>
+A：你的 Java 程式應該從高階的設計開始。<br>
+B：你通常會在建構新的 class 寫出下列三種東西：<br>
+a.precode。<br>
+b.測試碼。<br>
+c.實際程式碼。<br>
+C：precode 應該描述要做甚麼事情而不是如何做。<br>
+D：實作 method 之前應該撰寫測試碼。<br>
+E：如果知道要執行多少次，應該要使用 for 迴圈而不是 while。<br>
+F：使用前置或者後製來遞增來對變數加一，例如說 x++。<br>
+G：使用前置或者後製來遞減來對變數減一，例如說 x--。<br>
+H：使用 Interger.parseInt() 來取得 String 的整數值。<br>
+I：Interger.parseInt() 只會在所給的 String 為數字時有用。<br>
+J：使用 break 命令來提前跳脫迴圈。<br>
+6.Random() 與 getUserInput()<br>
+7.比較 for 與 while 的差別<br>
+8.加強版 for 迴圈用於 Java 5.0版本後<br>
