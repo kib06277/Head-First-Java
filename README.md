@@ -80,12 +80,12 @@ C：編寫 method 的 precode。<br>
 D：撰寫 method 的測試用程式。<br>
 E：實作出 class。<br>
 F：測試 method。<br>
-G：除錯或重新設計。<br><br>
+G：除錯或重新設計。<br>
 3.介紹 precode。<br>
 4.precode 分為三類：<br>
 A：instance variable 的宣告。<br>
 B：method 的宣告。<br>
-C：method 的邏輯。<br><br>
+C：method 的邏輯。<br>
 5.要點：<br>
 A：你的 Java 程式應該從高階的設計開始。<br>
 B：你通常會在建構新的 class 寫出下列三種東西：<br>
