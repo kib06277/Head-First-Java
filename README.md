@@ -71,7 +71,7 @@ B：直接存取變數，當你要對變數做更動時，其他存取到該變�
 10.全域變數與區域變數之間的差別，全域變數宣告在 class 中;區域變數宣告在 method 中，全域變數有預設值;區域變數沒有預設值。<br>
 11.物件的相等 (用 == 或者 equals() )<br>
 
-# 第五張 - 超強力 Method
+# 第五章 - 超強力 Method
 1.實作船戰遊戲。<br>
 2.開發 Class 流程：<br>
 A：找出 Class 應該做的事情。<br>
@@ -103,3 +103,28 @@ J：使用 break 命令來提前跳脫迴圈。<br>
 6.Random() 與 getUserInput()<br>
 7.比較 for 與 while 的差別<br>
 8.加強版 for 迴圈用於 Java 5.0版本後<br>
+
+# 第六章 - 使用 Java 函式庫
+1.加強第五章的小程式<br>
+2.當陣列不夠使用時，那就是用 ArrayList 吧!!!!<br>
+3.介紹 ArrayList<br>
+4.ArrayList 的操作步驟：<br>
+A、建構 Arraylist<Egg> myList = new ArrayList<Egg>;<br>
+B、加入元素 Egg s = new Egg(); myList.add(s);<br>
+C、再加入元素 Egg b = new Egg(); myList.add(b);<br>
+D、查詢大小 int theSize = myList.size();<br>
+E、查詢特定元素 boolean isIn = myList.contains(s);<br>
+F、查詢特定元素位置 int idx = myList.indexOf(b);<br>
+G、判斷集合是否為空 boolean empty = myList.isEmpty();<br>
+H、刪除元素 myList.remove(s);<br>
+5.ArrayList 與陣列的比較：<br>
+A、一般陣列在建構時就必須決定大小<br>
+B、存放物件給一般陣列時必須指定位置<br>
+C、一般陣列使用特殊的語法<br>
+D、在 Java 5.0 中的 ArrayList 是參數化的 (parameterized)<br>
+6.結構的細節<br>
+7.完成 DotCom 最終版<br>
+8.超強 Boolean 運算式<br>
+9.使用函式庫 (Java API)<br>
+10.你必須指明程式碼中所使用到的 class 的完整名稱 *<br>
+11.使用 Java API 說明文件<br>
