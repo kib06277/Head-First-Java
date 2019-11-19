@@ -1,0 +1,23 @@
+1.加強第五章的小程式
+2.當陣列不夠使用時，那就是用 ArrayList 吧!!!!
+3.介紹 ArrayList
+4.ArrayList 的操作步驟：
+A、建構 Arraylist<Egg> myList = new ArrayList<Egg>;
+B、加入元素 Egg s = new Egg(); myList.add(s);
+C、再加入元素 Egg b = new Egg(); myList.add(b);
+D、查詢大小 int theSize = myList.size();
+E、查詢特定元素 boolean isIn = myList.contains(s);
+F、查詢特定元素位置 int idx = myList.indexOf(b);
+G、判斷集合是否為空 boolean empty = myList.isEmpty();
+H、刪除元素 myList.remove(s);
+5.ArrayList 與陣列的比較：
+A、一般陣列在建構時就必須決定大小
+B、存放物件給一般陣列時必須指定位置
+C、一般陣列使用特殊的語法
+D、在 Java 5.0 中的 ArrayList 是參數化的 (parameterized)
+6.結構的細節
+7.完成 DotCom 最終版
+8.超強 Boolean 運算式
+9.使用函式庫 (Java API)
+10.你必須指明程式碼中所使用到的 class 的完整名稱 *
+11.使用 Java API 說明文件
