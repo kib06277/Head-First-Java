@@ -152,3 +152,32 @@ B：method 的存取權不得縮小<br>
 A：回傳型別可以不同<br>
 B：不能只改變回傳型別<br>
 C：可以更動存取權限<br>
+
+# 第八章 - 深入多型
+1.設計階層<br>
+2.有些 class 不應該被抽象化，例如：Animal，因為你不知道他實際長怎樣。<br>
+3.編輯器部會讓你初始抽象化(abstract)的class。<br>
+4.abstract 的 class 除了被 extend 過以外，是沒有用途、沒有值、沒有目的的。<br>
+5.抽象與具體的 class<br>
+6.除了 class 可以抽象化，method 也可以抽象化。<br>
+7.抽象 method 代表此 method 一定要被 override 過。<br>
+8.如果你宣告出一個抽象的 method ，就必須將 class 也標示為抽象化(abstract) 的。<br>
+9.你必須實作出所有抽象的 method。<br>
+10.實作多型<br>
+11.interface 與 polymorphism<br>
+12.編輯器是根據參考型別來判斷有哪些 method 可以呼叫，而不是根據物件確實的型別。<br>
+13.物件與 object<br>
+14."多型"意味著"很多型式" 例如：Snowboard 可以當作 Snowboard 或者 object<br>
+15.當你把物件塞進 ArrayList<Object> 時，你只能把它當作 Object。<br>
+16.從 ArrayList<Object>取出參考時，參考的型別只會是 Object。<br>
+17.物件型別轉換<br>
+18.修改 class 階層<br>
+19.有哪些方法可以在 PetShop 程式中 reuse 現有的 class?<br>
+方法一：採用最簡單的做法，把寵物功能加進 Animal 中<br>
+方法二：採用方法一，但是把寵物的行為設定成抽象的，強迫每個動物都必須 override 過該行為<br>
+方法三：把功能接加到有需要的地方<br>
+20.多重繼承<br>
+21.使用 interface 來完成多重繼承的效果<br>
+22.interface 解決致命方塊的辦法就是把全部的 method 弄成抽象。<br>
+23.不同繼承樹的 class 也可以實作相同的 interface<br>
+24.super 的使用<br>
