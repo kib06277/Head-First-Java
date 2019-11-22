@@ -1,0 +1,32 @@
+1.每個物件有生有死，你必須為物件的生命循環週期負責。必須定義物件何時建構和何時死亡。
+2.Stack 與 Heap 的生存空間
+3.method 會被堆疊再一起
+4.Stack 上的物件參考
+5.建構物件三步驟：Duck myDuck = new Duck();
+A：宣告參考變數　Duck myDuck
+B：建構物件 new Duck();
+C：連接物件與參考 =
+6.method 有回傳型別，constructor 沒有回傳型別而且必須要和 class 名稱相同
+7.使用 Constructor 來初始化物件狀態
+8.過載與預設的 Constructor
+9.Overload 的意思代表你有一個以上的 constructor 且參數都不相同
+10.如果你寫了 Constructor，編譯器就不會在幫你預設 Constructor
+11.最好是有無參數的 Constructor 讓人可以選擇使用預設值。
+12.Constructor 必須記得的四件事：
+A：Constructor 是個 new 物件時會執行的程式
+B：Constructor 必須與 class 的名稱一樣並且沒有回傳型別
+C：如果你沒有寫 Constructor 的話，編譯器會幫妳寫一個沒有參數的
+D：一個 class 可以有很多個 Constructor ，但是不能有相同的參數型別和順序，這叫做 Overload 過的 Constructor
+13.superclass 的空間
+14.建構 Hippo 也代表建構 Animal 與 Object
+15.如何呼叫 superclass 的 Constructor? A：使用 super();
+16.從某個 Constructor 呼叫 Overload 版的另外一個 Constructor
+17.每個 Constructor 可以選擇呼叫 super() 或者 this()，但是不能同時呼叫。
+18.物件的壽命：
+A：區域變數只會存活在宣告該變數的 method 中
+B：實體變數的壽命與物件相同。如果物件還活著，則實體變數也會是活著的。
+19.參考變數的生命週期，當最後一個參考消失時，物件就會變成可回收的。
+20.有三種方式可以解散物件的參考：
+A：參考永久性的離開 scope
+B：參考被指派到其他的物件上
+C：直接將參考設定為 null
