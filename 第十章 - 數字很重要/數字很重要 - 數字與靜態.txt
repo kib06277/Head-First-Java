@@ -1,0 +1,34 @@
+1.Math 的 method：
+A：Math.random() 回傳介於0.0到趨近 1.0 之間的 double。
+B：Math.abs() 回傳 double 型別參數的絕對值。
+C：Math.round 根據參數是 float 或 double 回傳四捨五入之後的 int 或 long。
+D：Math.min() 回傳兩參數較小的那一個。
+E：Math.max() 回傳兩參數較大的那一個。
+2.在 Math 這個 class 中的所有 method 都不需要實體變數。而且因為這些 method 都是 static 的，所以你無須 Math 實體。你會用到的只有他 class 本身。
+3.非 static 與 static 的差別。
+4.靜態的 method 不能呼叫非靜態的變數。
+5.靜態的 method 不能呼叫非靜態的 method。
+6.靜態變數：他的值對所有實體來說都是相同的。
+7.靜態變數的功能 :被同 class 的所有實體共享的變數。
+8.靜態變數是共用的。
+9.同一 class 所有的實體共用一份靜態變數。
+10.靜態變數會在該 class 的任何靜態 method 執行之前就初始。
+11.靜態的 final 變數是常數(static final 常數)
+12.常數變數的名稱應該都要是全部大寫字母
+13.靜態 final 變數的初始化：
+A：宣告的時候
+B：在靜態起始程序中
+14.final 不只用在靜態變數上也可以拿來修飾非靜態的變數。例如：實體變數、去域變數、method 的參數。但是不管哪種都表示值不能變動。
+15.可以利用 final 來防止 method 的 override 或者製作 subclass。
+16.final 的變數代表你不能改變值。
+17.final 的 method 代表你不能 override 掉該 method。
+18.final 的 class 代表你不能 extend 過該 class (也就是建構她的 subclass)。
+19.靜態的 method 應該用 class 的名稱來呼叫。
+20.在 Java 5.0 之前當你需要以物件方式來處理 primitive 時，必須先包裝起來。
+21.在 Java 5.0 之後 autoboxing：不必把 primitive 與物件分得那麼清楚。
+22.可以用 autoboxing 包裝的地方：
+A：method 的參數
+B：回傳值
+C：boolean 運算式
+D：數值運算
+E：指派
