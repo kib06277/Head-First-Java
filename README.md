@@ -251,5 +251,17 @@ B：回傳值<br>
 C：boolean 運算式<br>
 D：數值運算<br>
 E：指派<br>
-
+23.包裝靜態的工具性 method<br>
+24.數字格式化(java.utill 中的 Firnatter)<br>
+25.格式化兩個主要部分：<br>
+A：格式指示<br>
+B：要格式化的值<br>
+26.format()<br>
+27.在個是化指示中一定要給的是型別，如果還要指定其他項目的化，要把型別放在最後。<br>
+28.介紹 format 使用在數值和日期<br>
+29.使用 java.util.Calender 來操縱日期!<br>
+30.要取得目前的日期時間就用 Date，其餘功能可以從 Calendar 上面找到<br>
+31.運用 Calendar 物件與介紹<br>
+32.靜態的 import ((個人不推<br>
+33.靜態變數比較有效率。共用的 class 會省下很多記憶體!<br>
 
