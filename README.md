@@ -265,3 +265,38 @@ B：要格式化的值<br>
 32.靜態的 import ((個人不推<br>
 33.靜態變數比較有效率。共用的 class 會省下很多記憶體!<br>
 
+# 第十一章 - 有風險的行為
+1.建構練習題。<br>
+2.JavaSound API - MIDI 的介紹。<br>
+3.呼叫有風險的 method，Java 使用 exception 來告訴呼叫的 method 有問題!!!<br>
+4.例外是一種 Exception 型別的物件。<br>
+5.method 可以抓住其他 method 所拋出的例外。例外總是會丟回給呼叫方。<br>
+6.會拋出例外的 method 必須要宣告他可能會這樣做。<br>
+7.編譯器會核對每件事，除了 RuntimeExceptions 以外，編譯器掛保證：<br>
+A：如果你有拋出例外，你一定要使用 throw 來宣告這回事。<br>
+B：如果你呼叫會拋出例外的 method，你必須確認你知道例外的可能性。將呼叫包在 try/catch 區段中是一種滿足編輯器的方法。<br>
+8.try/catch 的流程控制。<br>
+9.finally：無論如何都要執行的部分。<br>
+10.處理多重的例外。<br>
+11.例外也是多型(polymorphic)的：<br>
+A：以例外的 supertype 來宣告會拋出的例外。<br>
+B：以所拋出的例外 supertype 來 catch 例外。<br>
+12.可以用 super 來處理所有例外但並不代表應該這樣做，因為每個需要獨特處理的例外撰寫不同的 catch 區塊。<br>
+13.有多個 catch 區塊時要從小排到大。<br>
+14.duck 掉例外。<br>
+15.解決例外的兩種辦法，第一種處理(try/catch)，第二種逃避(duck 掉)。<br>
+16.例外處理規則：<br>
+A：catch 與 finally 不能沒有 try。<br>
+B：try 與 catch 之間不能有程式。<br>
+C：try 一定要有 catch 或 finally。<br>
+D：只帶有 finally 的 try 必須要宣告例外。<br>
+17.MIDI 的 Message 是 MidiEvent 的關鍵<br>
+18.訊息的格式：<br>
+A：訊息類型<br>
+B：Channel<br>
+C：要發出的音符<br>
+D：力道<br>
+19.改變訊息：<br>
+A：改變音符<br>
+B：改變音長<br>
+C：改變樂器<br>
