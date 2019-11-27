@@ -300,3 +300,56 @@ D：力道<br>
 A：改變音符<br>
 B：改變音長<br>
 C：改變樂器<br>
+
+# 第十二章 - 看圖說故事
+1.介紹圖形介面(GUI)。<br>
+2.建構 GUI 步驟：<br>
+A：製作 frame。<br>
+B：製作 widger。<br>
+C：把 widget 加入 frame 上。<br>
+D：顯示出來。<br>
+3.介紹使用者介面事件。<br>
+4.使用者介面事件步驟：<br>
+A：被按下時要執行的 method (也就是按鈕任務)。<br>
+B：偵測按鈕被按下的方法，也是就是按鈕感應裝置。<br>
+5.傾聽事件的處理 (listener)<br>
+6.收到事件通知的步驟：<br>
+A：實作 ActionListener 這個 interface。<br>
+B：向按鈕登記 (對物件綁定傾聽事件)。<br>
+C：定義事件處理的 method (實作 inteface 上的 method)。<br>
+7.listener、來源與事件。<br>
+8.在 GUI 上面加東西的三種方法：<br>
+A：在 frame 上放置 widget。<br>
+B：在 widget 上繪製 2D 圖形。<br>
+C：在 widget 上繪製 JPEG 圖。<br>
+9.自行建構繪圖組件。<br>
+10.介紹 Graphics2D。<br>
+11.GUI 的 layout ：超過一個以上的 widget 的 frame。<br>
+12.多重 listener。<br>
+13.當每個按鈕執行不同工作時候要如何對多個不同的按鈕分別取得事件?<br>
+A：實作兩個 actionPerformed()。<br>
+B：對兩個按鈕登記同一個 listener。<br>
+C：建構不同的 ActionListener。<br>
+14.內層 class 的介紹。<br>
+15.內層 class 可以使用 外層所有的 method 與變數，就算 prive 用的也是一樣的。<br>
+16.inner class 的實體一定會綁在 outer class 的實體上。<br>
+17.inner class 的步驟：<br>
+A：建構外層 class 的實體。<br>
+B：使用外層 class 的實體來建構內層 class 的實體。<br>
+C：外層與內層有著連結。<br>
+18.介紹如何建構內層 class 實體。<br>
+19.一個外層可以有多個內層，但是一個內層只能有一個外層。<br>
+20.有 AB 兩個外層， A 有一個內層，但是 B 沒有內層， B 不可以去使用 A 的內層只有 A 可以使用。<br>
+21.動畫效果如何運作的：<br>
+A：在特定座標繪製物件。<br>
+B：在不同座標重新繪製物件。<br>
+C：於座標尚未到達終點前重複上列步驟。<br>
+22.傾聽非 GUI 的事件 例如：MIDI。<br>
+23.每個事件都要有的動作：<br>
+A：建構訊息實體。<br>
+B：呼叫 setMessage()。<br>
+C：製作訊息的 MidIEvent 實體。<br>
+D：把事件加入 track 上。<br>
+24.範例：如何使用靜態的 makeEvent()。<br>
+25.實作全部範例。<br>
+
