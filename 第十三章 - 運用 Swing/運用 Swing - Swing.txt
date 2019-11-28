@@ -1,0 +1,48 @@
+1.元件與容器的介紹。
+2.Swing 的組件有像是 Text Field、Button等等。事實上所有的元件都是 extend 自 javax.swing.JComponent。
+3.組件是可以套疊的。
+4.建構 GUI 四個步驟：
+A：建構 window(JFrame)
+B：建構組件
+C：把組件加到 Frame 上
+D：顯示出來
+5.布局管理員(layout manager) 用來控制所關聯組件上所攜帶的其他組件。
+6.layout manager 有幾種不同的類型，每個背景組件都可以有自訂規則的 layout manager。
+7.layout manager 是如何做決定的?布局的情境：
+A：製作 Panel 並加上三個 Button。
+B：Panel 的 layout manager 會詢問每個元件理想的大小應該是甚麼。
+C：Panel 的 layout manager 以他的布局策略來決定是否應該尊重全部或者部分的 Button 理想。
+D：把 Panel 加入 Frame 上。
+E：Frame 的 layout Manager 詢問 Panel 的理想尺寸。
+F：Frame 的 layout Manager 以他的布局策略來決定是否應該尊重全部或者部分的 Panel 理想。
+8.不同的 layout Manager 有不同的布局策略。
+9.世界三大首席管理員：Borde、Flow 與 Box。
+10.BorderLayout 管理五個區域：East、West、North、South、Center。
+11.FlowLayout 管理組建的流向：依序從左至右、從上而下。
+12.BoxLayout 就算他夠寬，他還是會垂直排列不會水平排列。
+13.FlowLayout 為水平排列，BoxLayout 為垂直排列，兩者可以搭配使用。
+14.操作 Swing 組件，JTextField 如何使用：
+A：取得欄位內容。
+B：設定內容。
+C：取得使用者輸入完畢按下 return 或 enter 鍵的事件。
+D：選取文字欄位的內容。
+E：把 GUI 目前焦點拉回到文字欄位以便讓使用者進行輸入動作。
+15.操作 Swing 組件，JTextArea 和 ScrollPane 如何使用：
+A：只有垂直的捲軸。
+B：替換掉文字內容。
+C：加入文字。
+D：選取內容
+E：把 GUI 目前焦點拉回到文字欄位以便讓使用者進行輸入動作。
+16.操作 Swing 組件，JCheckBox 如何使用：
+A：傾聽 item 的事件(被選取或者變成非選取)。
+B：處理事件(判別是否被選取)。
+C：用程式來選取或除去選取。
+17.操作 Swing 組件，JList 如何使用：
+A：讓它顯示垂直的捲軸。
+B：設定顯示的行數。
+C：限制使用者只能選取一個項目。
+D：對選擇事件作登記。
+E：處理事件(判別選了哪個項目)。
+18.製作練習題 BeatBox。
+
+
