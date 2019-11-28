@@ -353,3 +353,50 @@ D：把事件加入 track 上。<br>
 24.範例：如何使用靜態的 makeEvent()。<br>
 25.實作全部範例。<br>
 
+# 第十三章 - 運用 Swing
+1.元件與容器的介紹。<br>
+2.Swing 的組件有像是 Text Field、Button等等。事實上所有的元件都是 extend 自 javax.swing.JComponent。<br>
+3.組件是可以套疊的。<br>
+4.建構 GUI 四個步驟：<br>
+A：建構 window(JFrame)<br>
+B：建構組件<br>
+C：把組件加到 Frame 上<br>
+D：顯示出來<br>
+5.布局管理員(layout manager) 用來控制所關聯組件上所攜帶的其他組件。<br>
+6.layout manager 有幾種不同的類型，每個背景組件都可以有自訂規則的 layout manager。<br>
+7.layout manager 是如何做決定的?布局的情境：<br>
+A：製作 Panel 並加上三個 Button。<br>
+B：Panel 的 layout manager 會詢問每個元件理想的大小應該是甚麼。<br>
+C：Panel 的 layout manager 以他的布局策略來決定是否應該尊重全部或者部分的 Button 理想。<br>
+D：把 Panel 加入 Frame 上。<br>
+E：Frame 的 layout Manager 詢問 Panel 的理想尺寸。<br>
+F：Frame 的 layout Manager 以他的布局策略來決定是否應該尊重全部或者部分的 Panel 理想。<br>
+8.不同的 layout Manager 有不同的布局策略。<br>
+9.世界三大首席管理員：Borde、Flow 與 Box。<br>
+10.BorderLayout 管理五個區域：East、West、North、South、Center。<br>
+11.FlowLayout 管理組建的流向：依序從左至右、從上而下。<br>
+12.BoxLayout 就算他夠寬，他還是會垂直排列不會水平排列。<br>
+13.FlowLayout 為水平排列，BoxLayout 為垂直排列，兩者可以搭配使用。<br>
+14.操作 Swing 組件，JTextField 如何使用：<br>
+A：取得欄位內容。<br>
+B：設定內容。<br>
+C：取得使用者輸入完畢按下 return 或 enter 鍵的事件。<br>
+D：選取文字欄位的內容。<br>
+E：把 GUI 目前焦點拉回到文字欄位以便讓使用者進行輸入動作。<br>
+15.操作 Swing 組件，JTextArea 和 ScrollPane 如何使用：<br>
+A：只有垂直的捲軸。<br>
+B：替換掉文字內容。<br>
+C：加入文字。<br>
+D：選取內容<br>
+E：把 GUI 目前焦點拉回到文字欄位以便讓使用者進行輸入動作。<br>
+16.操作 Swing 組件，JCheckBox 如何使用：<br>
+A：傾聽 item 的事件(被選取或者變成非選取)。<br>
+B：處理事件(判別是否被選取)。<br>
+C：用程式來選取或除去選取。<br>
+17.操作 Swing 組件，JList 如何使用：<br>
+A：讓它顯示垂直的捲軸。<br>
+B：設定顯示的行數。<br>
+C：限制使用者只能選取一個項目。<br>
+D：對選擇事件作登記。<br>
+E：處理事件(判別選了哪個項目)。<br>
+18.製作練習題 BeatBox。<br>
