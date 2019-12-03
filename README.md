@@ -446,3 +446,68 @@ E：刪除目錄或檔案(成功會回傳true)。<br>
 A：使用 Serialver 工具來取得版本 ID。<br>
 B：把輸出拷貝到 class 上。<br>
 C：在修改 class 的時候要確定修改程式的後果!例如說新的 Dog 要能夠處理舊的 Dog 解序列化之後新加入變數的預設值。<br>
+
+# 第十五章 - 網路連線
+1.互動程式概觀：<br>
+A：用戶端必須要認識伺服器。<br>
+B：伺服器必須要認識所有用戶端。<br>
+2.運作方式：<br>
+A：用戶端連接到伺服器。<br>
+B：伺服器建立連線並把用戶端加到來賓清單中。<br>
+C：另外一個用戶連接上來。<br>
+D：用戶 A 送出訊息到聊天伺服器上。<br>
+E：伺服器將訊息送給所有的來賓。<br>
+3.連接、傳送與接收，要讓用戶端能運作必須先學會三件事情：<br>
+A：如何建立用戶端與伺服器之間的初始連結。<br>
+B：如何傳送訊息到伺服器。<br>
+C：如何接受到來自伺服器的訊息。<br>
+4.網路互動溝通步驟：<br>
+A：Connect - 用戶端藉由建立 Socket 連線來連結伺服器。<br>
+B：Send - 用戶送出訊息給伺服器。<br>
+C：Receive - 用戶從伺服器接受訊息。<br>
+5.建立 Socket 連線 - 要建構 Socket 連線你得知道兩項關於伺服器的資訊：他在哪裡以及用在哪個阜號來收發資料。也就是 IP 位置和 port 號。<br>
+6.Socket 連線的建立代表兩台機器之間存有對方的資訊，包括網路位置與 TCP 的 port 號。<br>
+7.使用 BufferedReader 從 Socket 上讀取資料的步驟：<br>
+A：建立對伺服器的 Socket 連線。<br>
+B：建立連結到 Socket 上低階輸出串流的 InputSteramReader。<br>
+C：建立 BufferedReader 來讀取。<br>
+8.以 PrintWriter 寫資料到 Socket 上。<br>
+A：對伺服器建立 Socket 連線。<br>
+B：建立連結到 Socket 的 PrintWriter。<br>
+C：寫入資料。<br>
+9.建立簡單的用戶端步驟： (範例 DailyAdviceClient)<br>
+A：連結。<br>
+B：讀取。<br>
+10.建立簡單的伺服器步驟：(範例 DailyAdviceServer)<br>
+A：伺服器應用程式對特定 Port 建構出 ServerSocket ServerSocket serverSock = new ServerSocket(4242);<br>
+B：用戶端對伺服器應用程式建構 Socket 連線 Socket Sock = new Socket("190.165.1.103",4242);<br>
+C：伺服器建構出與用戶端通訊的新 Socket ，Socket Sock = serverSock.accept();<br>
+11.將伺服器變成可以服務多個用戶端會有那些問題和哪些選項?<br>
+A - 第一個問題：如何從伺服器取得訊息?<br>
+B - 第二個問題：何時會從伺服器取得訊息?<br>
+A - 解決辦法選項：<br>
+a.選項一：每隔二十秒查詢一次伺服器。<br>
+b.選項二：每當使用者送出訊息時就順便從伺服器讀取訊息。<br>
+c.選項三：當訊息被送到伺服器上的時候就把他讀回來。 (設計模式 - 觀察者模式)<br>
+12.執行序和 Thread 的介紹。<br>
+13.Java 有多個 thread 但是只能有一種 Thread。<br>
+14.thread 是獨立的執行序。他代表獨立的執行空間。<br>
+15.Thread 是 Java 中用來表示執行序的 class。<br>
+16.要建立執行序就得建構 Thread。<br>
+17.thread 執行的步驟：<br>
+A：JVM 呼叫 main()。<br>
+B：main() 啟動新的 thread。新的 thread 啟動期間，main 的 thread 會暫時的凍結。<br>
+C：JVM 會在 thread 與原本的 main 執行序之間切換直到兩者都完成為止。<br>
+18.如何啟動新的執行序：<br>
+A：建構 Runnable 物件(thread 的任務)。<br>
+B：建構 Thread 物件 (執行工人)並指派 Runnable (任務)。<br>
+C：啟動 Thread。<br>
+19.每個 Thread 需要一個任務來執行，一個可以放在執行空間的任務。<br>
+20.對 Thread 而言，他就是工人，而Runnable 就是工人的工作。Runnable 帶有會放在執行空間的第一項 method:run();<br>
+21.一旦執行序進入可執行狀態，他會在可執行與執行中兩種狀態來來去去，同時也會有另外一種狀態：暫時不可執行(又稱為被 blocked 狀態)。<br>
+22.當 thread 遇到閒置、等待其他 thread 完成、等待串流的資料、等待被占用的物件等等等都會被變成 blocked 狀態。<br>
+23.建構與啟動兩個 thread。<br>
+24.thread 發生碰撞的問題與解決辦法。<br>
+25.每個 Java 物件都有一把鎖。每個鎖只有一把鑰匙。通常物件都沒有上鎖也沒有人在乎這件事情，但是如果物件有同步化的 method，則 thread 只能再取得鑰匙的情況下進入 thread。也就是說並沒有其他 thread 已經進入的情況下才能進入。<br>
+26.thread 的同步化問題，以同步機制讓 increment() 原子化。<br>
+27.同步化的死結。<br>
