@@ -511,3 +511,46 @@ C：啟動 Thread。<br>
 25.每個 Java 物件都有一把鎖。每個鎖只有一把鑰匙。通常物件都沒有上鎖也沒有人在乎這件事情，但是如果物件有同步化的 method，則 thread 只能再取得鑰匙的情況下進入 thread。也就是說並沒有其他 thread 已經進入的情況下才能進入。<br>
 26.thread 的同步化問題，以同步機制讓 increment() 原子化。<br>
 27.同步化的死結。<br>
+
+# 第十六章 - 資料結構
+1.排序。<br>
+2.ArrayList API。<br>
+3.ArrayList 不是唯一的集合。<br>
+4.其他相關的集合：<br>
+A：TreeSet。<br>
+B：HashMap。<br>
+C：LinkedList。<br>
+D：HashSet。<br>
+E：LinkedHashMap。<br>
+5.可以使用 Treeset 或者 Collection.sort()。<br>
+6.儲存自訂物件-要使用物件而不只是 String 例如自訂 Song 物件。<br>
+7.泛行意味著更好的型別安全性。<br>
+8.運用 generic 你就可以建構型別更好的集合，讓問題盡可能在編譯期間就可以抓到，而不會等到執行期才出現。<br>
+9.如果沒有 generic ，編輯議會很快就你物件送到錯誤的集合中。例如綿羊物件放到老虎集合中。<br>
+10.關於 generic ：<br>
+A：建構被泛型化 class (例如 ArrayList) 的實體。<br>
+B：宣告與指定 generic 型別的變數。<br>
+C：宣告(與呼叫)取用 generic 型別的 method。<br>
+11.使用泛型的 class。<br>
+12.Arraylist 的說明文件(又稱"E是甚麼?")，把 E 想做是 "集合所要維護與回傳的元素型(E 代表 Element)"<br>
+13.E 代表用來建構與初始 ArrayList 的型別。<br>
+14.運用泛型的 method：<br>
+A：使用定義在 class 宣告的型別參數。<br>
+B：使用未定義在 class 宣告的型別參數。<br>
+15.以泛型的觀點來說，extend 代表 extend 或者 implement。<br>
+16.使用自製的 Comparator。<br>
+17.Collection 的 API 說明吳建忠有三個主要的 interface：List、Set、Map。<br>
+A：List - 對付順序用的。<br>
+B：Set - 注重獨一無二的。<br>
+C：Map - 用 key 來搜尋的。<br>
+18.以 HashSet 取代 ArrayList。<br>
+19.物件的比對。<br>
+20.HashSet 如何檢查重複：hashCode() 與 equals()。<br>
+21.TreeSets 與排序。<br>
+22.使用 TreeSet 的元素必須是 Comparable 並且以下兩點必須一點為真：<br>
+A：集合中的元素必須是有實作過 Comparable 的型別。<br>
+B：使用過 overload 過或是取用 Comparator 參數的 constructor 來建構 TreeSet。<br>
+23.介紹 Map。<br>
+24.陣列與 ArrayLists 的差別。<br>
+25.陣列的型別是在執行期檢查的，但是集合的型別檢查只會發生在編譯期。<br>
+26.萬用字元例如： ? extend Animal。<br>
