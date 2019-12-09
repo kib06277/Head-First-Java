@@ -1,0 +1,41 @@
+1.排序。
+2.ArrayList API。
+3.ArrayList 不是唯一的集合。
+4.其他相關的集合：
+A：TreeSet。
+B：HashMap。
+C：LinkedList。
+D：HashSet。
+E：LinkedHashMap。
+5.可以使用 Treeset 或者 Collection.sort()。
+6.儲存自訂物件-要使用物件而不只是 String 例如自訂 Song 物件。
+7.泛行意味著更好的型別安全性。
+8.運用 generic 你就可以建構型別更好的集合，讓問題盡可能在編譯期間就可以抓到，而不會等到執行期才出現。
+9.如果沒有 generic ，編輯議會很快就你物件送到錯誤的集合中。例如綿羊物件放到老虎集合中。
+10.關於 generic ：
+A：建構被泛型化 class (例如 ArrayList) 的實體。
+B：宣告與指定 generic 型別的變數。
+C：宣告(與呼叫)取用 generic 型別的 method。
+11.使用泛型的 class。
+12.Arraylist 的說明文件(又稱"E是甚麼?")，把 E 想做是 "集合所要維護與回傳的元素型(E 代表 Element)"
+13.E 代表用來建構與初始 ArrayList 的型別。
+14.運用泛型的 method：
+A：使用定義在 class 宣告的型別參數。
+B：使用未定義在 class 宣告的型別參數。
+15.以泛型的觀點來說，extend 代表 extend 或者 implement。
+16.使用自製的 Comparator。
+17.Collection 的 API 說明吳建忠有三個主要的 interface：List、Set、Map。
+A：List - 對付順序用的。
+B：Set - 注重獨一無二的。
+C：Map - 用 key 來搜尋的。
+18.以 HashSet 取代 ArrayList。
+19.物件的比對。
+20.HashSet 如何檢查重複：hashCode() 與 equals()。
+21.TreeSets 與排序。
+22.使用 TreeSet 的元素必須是 Comparable 並且以下兩點必須一點為真：
+A：集合中的元素必須是有實作過 Comparable 的型別。
+B：使用過 overload 過或是取用 Comparator 參數的 constructor 來建構 TreeSet。
+23.介紹 Map。
+24.陣列與 ArrayLists 的差別。
+25.陣列的型別是在執行期檢查的，但是集合的型別檢查只會發生在編譯期。
+26.萬用字元例如： ? extend Animal。
