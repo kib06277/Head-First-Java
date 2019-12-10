@@ -554,3 +554,48 @@ B：使用過 overload 過或是取用 Comparator 參數的 constructor 來建�
 24.陣列與 ArrayLists 的差別。<br>
 25.陣列的型別是在執行期檢查的，但是集合的型別檢查只會發生在編譯期。<br>
 26.萬用字元例如： ? extend Animal。<br>
+
+# 第十七章 - 發布程式
+1.部署 Java 應用程式。<br>
+2.部署的選擇：<br>
+A：本機 - 完全在本機。<br>
+B：兩者之間的組合 - Web Start 和 RMI APP。<br>
+C：遠端 - Http Servlets。<br>
+3.Java 程式是由一群 class 組成。那就是開發過程的輸出。<br>
+4.將原始碼與 class 檔案分離，編輯時加上 -d (directory)旗標。<br>
+5.把程式包進 JAR。<br>
+6.建構可執行的JAR：<br>
+A：確定所有的 class 檔案都在 classes 目錄下。<br>
+B：建立 manifest.txt 來描述哪個 class 帶有 main();<br>
+C：執行 jar 工具來建構帶有所有 class 以及 manifest 的 Jar 檔案。<br>
+7.大部分完全在本機的 Java 應用程式都是以可執行的 JAR 來部署的。<br>
+8.把 class 包進 package 中。<br>
+9.用 package 防止 class 名稱衝突。<br>
+10.package 可以預防名稱衝突，但是這只會在 package 名稱保證不會重複的情況下作用。最好的方式是在前面加上反過來的 domain 名稱。<br>
+11.把 Class 包進 package 中：<br>
+A：選擇 package 名稱。<br>
+B：在 class 中 加入 package 指令。<br>
+C：設定相對應的目錄結構。<br>
+12.必須把 class 放在與 package 階層結構相對應的目錄結構下。<br>
+13.編輯與執行 package，加上 -d(directory) 旗標來編輯。<br>
+14.-d 旗標會要求編輯器將編輯結果根據 package 的結構來建立目錄與輸出，如果目錄還沒有建好，編輯器會自動處理。<br>
+15.以 package 建構可執行的 JAR。<br>
+16.以 package 建構可執行的JAR：<br>
+A：確定所有的 class 檔案都在 classes 目錄下正確相對應的 package 結構中。<br>
+B：建立 manifest.txt 來描述哪個 class 帶有 main();<br>
+C：執行 jar 工具來建構帶有所有 class 以及 manifest 的 Jar 檔案。<br>
+17.Java Web Start 的介紹。<br>
+18.使用者透過點選網頁上某個連結來啟動 Java Web Start 的應用程式。一旦程式下載後，他就能獨立於瀏覽器之外來執行。事實上，Java Web Start 應用程式只不過是<br>
+透過網路來散佈的應用程式而已。<br>
+19.Java Web Start 的運作方式<br>
+A：用戶端點選某個網頁上的 JWS 應用程式的 link(.jnlp 檔)。<br>
+B：網頁伺服器收到 request 送出的 .jnlp 檔案(不是 JAR)給用戶端的瀏覽器。<br>
+C：瀏覽器啟動 Java Web Start，JWS 的 helper app 讀取 .jnlp 檔案，然後向伺服器要求 MyApp.jar。<br>
+D：網頁伺服器送出 .jar 檔案<br>
+E：JWS 取得 JAR 並呼叫指定 main() 來啟動應用程式。<br>
+20.建構與部屬 Java Web Start 的步驟：<br>
+A：將程式製作成可執行的 JAR。<br>
+B：撰寫 .jnlp 檔案。<br>
+C：.jnlp 與 JAR 檔案放到網站上。<br>
+D：對網頁伺服器設定新的 mime 類型 application/x-java-jnlp-file。<br>
+E：設定網頁連結到 .jnlp 檔案。<br>
