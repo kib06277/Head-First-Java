@@ -599,3 +599,77 @@ B：撰寫 .jnlp 檔案。<br>
 C：.jnlp 與 JAR 檔案放到網站上。<br>
 D：對網頁伺服器設定新的 mime 類型 application/x-java-jnlp-file。<br>
 E：設定網頁連結到 .jnlp 檔案。<br>
+
+# 第十八章 - 分散式運算
+一、距離不是問題，介紹 Java 的遠端程序 RMI (Remote Method Invocation，RMI) 技術。 <br>
+二、method 的呼叫都是發生在相同的 heap 上的兩個物件之間。<br>
+三、遠端程序呼叫的設計要建構出四樣東西：伺服器、用戶端、伺服器輔助設施、用戶端輔助設施。<br>
+四、建構用戶端與伺服器應用程式 - 伺服器應用程式是個遠端服務，是個帶有用乎戶端會要呼叫 nethod 的物件。<br>
+五、建構用戶端與伺服器端的輔助設施(helper) - 他們會處理所有用戶端與伺服器的低階網路輸出入細節，讓你用戶端好像在處理本機呼叫一樣。<br>
+六、helper 的任務 - helper 偽裝成服務溝通伺服器端和用戶端，用戶端 (呼叫) <-> helper (呼叫) <-> 伺服器端。<br>
+七、用戶端物件看起來像是在呼叫遠端的 method。但是實際上他是在呼叫本地處理 Socket 與串流細節的 "Proxy"。<br>
+八、呼叫 method 的過程：<br>
+	1.用戶端物件對 helper 物件呼叫 doBigThing()。<br>
+	2.用戶端 helper 把呼叫資訊打包穿越網路送到伺服器的 helper。<br>
+	3.服務端的 helper 解開來自用戶端的 helper 資訊，並以此呼叫真正的服務。<br>
+九、Java RMI 提供用戶端與伺服器端的 helper 物件。<br>
+十、在 RMI 中，用戶端的 helper 稱為 stub ，而伺服器端的 helper 稱為 skeleton。<br>
+十一、建構遠端服務：<br>
+	1.建構 Remote interface<br>
+		A.Extend 過 java.rmi.Remote。<br>
+		B.宣告所有的 method 都會拋出 RemoteException。<br>
+		C.確定參數與回傳值都是 primitive 或 Serializable。<br>
+	2.實作 Remote。<br>
+		A.實作 Remote 這個 interface。<br>
+		B.extend 過 UnicastRemoteObject。<br>
+		C.撰寫宣告 RemoteException 的無參數 constructor。<br>
+		D.向 RMI registry 登記服務。<br>
+	3.以 rmic 產生 stub 與 skeletion。<br>
+		A.對實作出的 class(非 interface)執行 rmic。<br>
+	4.啟動 RMI registry(rmiregistry)。<br>
+		A.叫出命令列來啟動 rmiregistry。<br>
+	5.啟動遠端服務<br>
+		A.叫出另外一個命令列來啟動服務。<br>
+十二、用戶端如何取得 stub 物件：<br>
+	1.用戶端查詢 RMI registru。<br>
+	2.RMI registry 傳回 stub 物件。<br>
+	3.用戶端就像取用真正的服務一樣的呼叫 sub 上的 method。<br>
+十三、確定每台機器都有所需的 class 檔案。<br>
+十四、使用 RMI 時程式設計師經常犯的錯誤：<br>
+	1.忘記在啟動遠端服務前燈啟動 rmiregistry(使用 Naming.rebind() 登記服務前 rmiregistry 必須啟動)。<br>
+	2.忘記把參數與回傳型別做成可序列化(編輯器不會偵測到，執行時才會發現錯誤)。<br>
+	3.忘記將 stub 的 class 交給用戶端。<br>
+十五、關於 servlet ：<br>
+	1.使用者填寫網頁上的表格並 sumbit。Http 伺服器收到 request 判斷出是要給 servlet 的，就將 request 傳送過去。<br>
+	2.servlet 開始執行，把資料存進資料庫，然後組合出傳回給瀏覽器的網頁。<br>
+十六、建構與執行 servlet 的步驟：<br>
+	1.找出可以放 servlet 的地方。<br>
+	2.取得 servlet.jar 並加到 classpath 上。<br>
+	3.經由 extend 過 HttpServlet 來撰寫 servlet 的 class。<br>
+	4.撰寫 HTML 來呼叫 servlet。<br>
+	5.設定 HTML 網頁與 servlet 給伺服器。<br>
+十七、EJB 伺服器九一堆你光靠 RMI 不會有的服務，像是交易管理、安全性、處理能量、資料庫、網路功能等。EJB 伺服器作用於 RMI 呼叫與服務之間。<br>
+十八、介紹 Jini：<br>
+	1.Jini 查詢服務在網路上啟動，並使用 IP multicast 為自己宣傳。<br>
+	2.已經啟動的另一個 Jini 服務會尋求像剛剛啟動的查詢服務登記。他登記的是功能而不是名稱，也就是實作的 interface，然後送出序列化物件給查詢服務。<br>
+	3.網路用戶端想要取得有時做 ScientificCalculator 的東西，可是不知道哪裡有，所以詢問查詢服務。<br>
+	4.查詢服務回應查詢結果。<br>
+十九、自療網路的運作：<br>
+	1.某個 Jini 服務要求登記，查詢服務回給一份租約。新登記的服務必須要定期更新租約，不然查詢服務會假設此服務已經離線。查詢服務會完整提供可用服務網路狀態。<br>
+	2.因為關機所以服務離線，因此也沒有更新租約，查詢服務就把他踢掉。<br>
+二十、通用服務瀏覽器的運作方式：<br>
+	1.用戶啟動並查詢在 RMI registry 上登記為 ServiceServer 的服務然後取回 stub。<br>
+	2.用戶端對 stub 呼叫 getServiceList()。他會回傳服務的陣列。<br>
+	3.用戶端以 GUI 展示出服務物的清單。<br>
+	4.使用者從清單點選，因此用戶端呼叫 getService() 取得實際服務的序列化物件然後在用戶端的瀏覽器執行。<br>
+	5.用戶端呼叫剛剛序列化物件的 getGuiPanel()。此服務的 GUI 會顯示在瀏覽器中，且使用者可與他在本機上互動。這時候就不需要遠端服務囉。<br>
+二十一、class 與 interface：<br>
+	1.ServiceServer 這個 interface 實作 Remote。<br>
+	2.ServiceServerlmpl 這個 class 實作 ServiceServer。<br>
+	3.ServiceBrower。<br>
+	4.Service。<br>
+	5.DiceService 有實作 Service。<br>
+	6.有實作 Service 的 MiniMusiceService。<br>
+	7.DayOfThWeekService。<br>
+
+★ 架構化參考：深入淺出-設計模式之代理人模式<br>
