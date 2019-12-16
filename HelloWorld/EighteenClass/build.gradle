@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('src/main/java/com/hfad/eighteenclass/servlet-api.jar')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

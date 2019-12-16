@@ -1,0 +1,2 @@
+include ':app', ':OneClass', ':TwoClass', ':ThreeClass', ':FourClass', ':FiveClass', ':SixClass', ':SevenClass', ':EightClass', ':NineClass', ':TenClass', ':ElevenClass', ':TwelveClass', ':ThirteenClass', ':FourteenClass', ':FifteenClass', ':SixteenClass', ':EighteenClass', ':Appendix'
+rootProject.name='HelloWorld'
