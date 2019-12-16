@@ -1,6 +1,8 @@
 # Tips 使用 android studio 開發 java
 https://www.itread01.com/content/1543211946.html 參考網址<br>
 
+# HelloWorld 是全部章節的 code
+
 做法：<br>
 1.新建專案 new project<br>
 2.新建模組 new module<br>
