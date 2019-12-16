@@ -1,6 +1,5 @@
 # Tips 使用 android studio 開發 java
 https://www.itread01.com/content/1543211946.html 參考網址<br>
-
 做法：<br>
 1.新建專案 new project<br>
 2.新建模組 new module<br>
@@ -12,6 +11,8 @@ https://www.itread01.com/content/1543211946.html 參考網址<br>
 
 # Head First Java
 https://github.com/bethrobson/Head-First-Java 作者 github<br>
+
+# HelloWorld 是全部章節的 code
 
 # 第一章 - 進入 Java 的世界
 1.Java 的運作方式<br>
@@ -673,3 +674,17 @@ E：設定網頁連結到 .jnlp 檔案。<br>
 	7.DayOfThWeekService。<br>
 
 ★ 架構化參考：深入淺出-設計模式之代理人模式<br>
+
+# 附錄
+一、程式料理最終版。<br>
+二、十大遺珠之憾：<br>
+1.操作位元(~ & | ^ >> >>> <<) 以上各代表的意思。<br>
+2.Immutabiluty - 節省記憶體空間。<br>
+3.Assertion - Java 5.0 強化的功能。<br>
+4.Block Scope 的介紹。<br>
+5.Linked Invocations 的介紹。<br>
+6.Anonymous 與 static Nested Classes 的介紹。<br>
+7.Access Level 與 Access Modifier (誰可以看到甚麼) - 權限介紹(public、protected、default、private)。<br>
+8.String 與 StringBuffer/StringBuilder 的 method - Java 5.0 之後的加強 StringBuffer 功能。<br>
+9.Multidimesnional Arrays - 多維陣列解析。<br>
+10.Enumeration(又稱為 Enumerated 型別或者 Enum) 的介紹。<br>
